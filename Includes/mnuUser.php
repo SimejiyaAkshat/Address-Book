@@ -1,6 +1,6 @@
 <html>
 <body>
-<table style="border-right:#000000 1px solid;">
+<table>
 <tr>
 	<td>
 		login as, <b><?php echo $_SESSION["UserName"];?></b>

@@ -35,21 +35,15 @@ if(isset($_POST['btnLogin']))
 <html>
 <head>
 <title>Login To AddressBook</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table align="center" width="800px">
-<tr>
-	<td>
-		<?php include'Includes\Header.html';?>
-	</td>
-</tr>
 
-<tr>
-	<td>
+	<?php include'Includes\Header.html';?>
 	<form method="post" action="index.php" enctype="multipart/form-data">
-		<table align="center" style="border-bottom:#000000 1px solid;">
+		<table>
 			<tr>
-				<td colspan="2" style="border-bottom:#000000 1px solid;"><b>Login Here</b></td>
+				<td colspan="2"><b>Login Here</b></td>
 			</tr>
 			<tr>
 				<td>User Name</td>
@@ -68,15 +62,6 @@ if(isset($_POST['btnLogin']))
 			</tr>
 		</table>
 	</form>
-	</td>
-</tr>
-</table>
-<table style="padding-top:100px;" width="800" align="center">
-	<tr>
-		<td>
-		<?php include 'Includes/Footer.html'?>
-		</td>
-	</tr>
-</table>
+<?php include 'Includes/Footer.html'?>
 </body>
 </html>

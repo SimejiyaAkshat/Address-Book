@@ -1,41 +1,3 @@
-<style type="text/css">
-.img1{
-	border-radius:50%;
-	border:solid black;
-}
-
-.img1:hover{
-	border-color:red;
-	border-radius:45%;
-}
-
-.tr1{
-	color:white;
-	
-}
-tr{
-height:30px;
-}
-
-a{
-	background-color:#906723;
-	color:#ffffff;
-	text-decoration:none;
-	padding:5px;
-	border-radius:10px;
-	
-}
-a:hover
-{
-	background-color:#cccccc;
-	color:#000;
-}
-
-.td{
-	background-color:grey;
-	color:white;
-}
-</style>
 <?php
 include_once 'Includes/dbconnection.php';
 session_start();
@@ -61,9 +23,10 @@ if(isset($_POST['btnSave']))
 <html>
 <head>
 	<title>Create New User</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table width='800px' align='center'>
+<table>
 <tr>
 	<td colspan='2'>
 		<?php include 'Includes/Header.html';?>
@@ -85,7 +48,7 @@ if(isset($_POST['btnSave']))
 	<form method='post' name="" action="CreateUser.php" enctype="multiport/form-data">
 	<td align='left'>
 	<table align='left'>
-	<tr bgcolor='grey' class='tr1'>
+	<tr>
 	<td colspan='2'>
 		Login Information
 	</td>

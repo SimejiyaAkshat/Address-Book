@@ -16,9 +16,10 @@ if(isset($_GET["PID"]))
 <html>
 <head>
 	<title>Delete the Data</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table align='center' width='800px'>
+<table>
 <tr>
 	<td colspan="2">
 		<?php include 'Includes/Header.html'?>

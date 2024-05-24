@@ -1,41 +1,3 @@
-<style type="text/css">
-.img1{
-	border-radius:50%;
-	border:solid black;
-}
-
-.img1:hover{
-	border-color:red;
-	border-radius:45%;
-}
-
-.tr1{
-	color:white;
-	
-}
-tr{
-height:30px;
-}
-
-a{
-	background-color:#906723;
-	color:#ffffff;
-	text-decoration:none;
-	padding:5px;
-	border-radius:10px;
-	
-}
-a:hover
-{
-	background-color:#cccccc;
-	color:#000;
-}
-
-.td{
-	background-color:grey;
-	color:white;
-}
-</style>
 <?php
 session_start();
 include_once 'Includes/dbconnection.php';
@@ -59,9 +21,10 @@ if(isset($_POST['btnChangePassword']))
 ?>
 <html>
 <head><title>Change Password</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table width='800' align='center'>
+<table>
 	<tr>
 		<td>
 			<?php include 'Includes\Header.html';?>
@@ -70,7 +33,7 @@ if(isset($_POST['btnChangePassword']))
 		<td>
 			<table>
 				<tr>
-					<td valign='top'>
+					<td>
 					<?php
 						if($_SESSION['UserRole'] == "Admin")
 						{

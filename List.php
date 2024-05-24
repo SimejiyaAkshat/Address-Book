@@ -1,41 +1,3 @@
-<style type="text/css">
-.img1{
-	border-radius:50%;
-	border:solid black;
-	margin:2px;
-}
-
-.img1:hover{
-	border-color:red;
-	border-radius:45%;
-}
-
-.tr1{
-	color:white;
-	
-}
-tr{
-height:30px;
-}
-
-a{
-	background-color:#906723;
-	color:#ffffff;
-	text-decoration:none;
-	padding:5px;
-	border-radius:10px;
-	
-}
-a:hover
-{
-	background-color:#cccccc;
-	color:#000;
-}
-
-.entry{
-	background-color: #cccccc;
-}
-</style>
 <?php 
 session_start();
 include_once 'Includes/dbconnection.php';
@@ -59,9 +21,10 @@ $result = mysqli_query($conn,$query);
 <html>
 <head>
 <title>List of Address Book</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table align="center" width="800px">
+<table>
 <tr>
 	<td colspan="5">
 		<?php include 'Includes\Header.html';?>
@@ -69,10 +32,10 @@ $result = mysqli_query($conn,$query);
 </tr>
 <form method="post">  
 <tr>
-	<td colspan='2' align='center'>Enter City Name:-  <input type='text' name='city' placeholder='City Name'></td>
+	<td colspan='2'>Enter City Name:-  <input type='text' name='city' placeholder='City Name'></td>
 </tr>
 <tr>
-	<td colspan='2' align='center'><input type='submit' name='submit'></td>
+	<td colspan='2'><input type='submit' name='submit'></td>
 </tr>
 </form>
 <tr>

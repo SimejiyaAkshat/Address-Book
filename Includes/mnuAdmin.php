@@ -1,12 +1,12 @@
 <html>
 <body>
-<table style="border-right:#000000 1px solid;">
+<table>
 <tr>
-	<td bgcolor='grey'>
+	<td>
 		<font color='white'>Login as <b><?php echo $_SESSION["UserName"]?></b></font>
 	</td>
 </tr>
-<div class='links'>
+<div>
 <tr>
 	<td>
 		<a href="./UserList.php">User List</a>

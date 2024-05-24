@@ -1,47 +1,3 @@
-<style type="text/css">
-.img1{
-	border-radius:50%;
-	border:solid black;
-}
-
-.img1:hover{
-	border-color:red;
-	border-radius:45%;
-}
-
-.tr1{
-	color:white;
-	
-}
-tr{
-height:30px;
-}
-
-a{
-	background-color:#906723;
-	color:#ffffff;
-	text-decoration:none;
-	padding:5px;
-	border-radius:10px;
-	
-}
-a:hover
-{
-	background-color:#cccccc;
-	color:#000;
-}
-
-.td{
-	background-color:grey;
-	color:white;
-}
-
-.headers{
-	background-color:#778899;
-	color:#f8f8ff;
-	border-radius:8px;
-}
-</style>
 <?php
 session_start();
 $name = "";
@@ -102,9 +58,10 @@ if(isset($_POST['btnSave']))
 <html>
 <head>
 	<title>Add New Entry</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table width="800px" align="center">
+<table>
 <tr>
 	<td colspan="2">
 		<?php include 'Includes\Header.html'?>
@@ -125,15 +82,15 @@ if(isset($_POST['btnSave']))
 	</td>
 	<td align='left'>
 	<form method='post' enctype='multipart/form-data' action = 'Entry.php'>
-	<table align='left'>
+	<table>
 		<tr>
-			<td class='headers'>Name</td>
+			<td>Name</td>
 			<td><input type="text" name="txtName" value="<?php echo $name;?>" size="40">
 				<input type="hidden" name="personID" value="<?php echo $personID;?>">
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Line-1
 			</td>
 			<td>
@@ -141,7 +98,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td  class='headers'>
+			<td>
 				Line-2
 			</td>
 			<td>
@@ -149,7 +106,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				City
 			</td>
 			<td>
@@ -157,7 +114,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Pincode
 			</td>
 			<td>
@@ -165,7 +122,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				State
 			</td>
 			<td>
@@ -173,7 +130,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Country
 			</td>
 			<td>
@@ -181,7 +138,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Gender
 			</td>
 			<td>
@@ -192,7 +149,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Contact No.
 			</td>
 			<td>
@@ -200,7 +157,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Email ID.
 			</td>
 			<td>
@@ -208,7 +165,7 @@ if(isset($_POST['btnSave']))
 			</td>
 		</tr>
 		<tr>
-			<td class='headers'>
+			<td>
 				Upload a file
 			</td>
 			<td>
