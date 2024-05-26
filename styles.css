@@ -13,6 +13,7 @@
 	align-items:center;
 	background-color: #000000;
 	color : #ffffff;
+	position: fixed;
 }
 
 .nav-logo {
@@ -40,3 +41,59 @@
 
 .footer table td{
 	color : #ffffff;
+}
+
+.login-form-outer {
+	width:100%;
+	height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.login-form {
+	width: 30%;
+	height: auto;
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+}
+
+.login-form table tbody{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+.login-form table {
+	background-color: #acacac;
+	border: 5px solid #605050;
+	border-radius:10px;
+	filter: drop-shadow(5px 15px 30px #ddccff);
+	font-size:18px;
+}
+
+.login-form table tr {
+	margin: 15px 10px;
+	display: inline-block;
+}
+
+.login-form table tr td{
+	text-align: center;
+}
+
+.login-button {
+	background-color: #111111;
+	padding:10px 12px;
+	color:#ffffff;
+	border:none;
+	border-radius:8px;
+}
+
+.login-form input[type="text"], .login-form input[type="password"]{
+	background-color: #acacac;
+	border: 2px solid #605050;
+	border-radius:5px;
+	padding:3px 5px;
+	font-size:20px;
+}

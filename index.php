@@ -40,28 +40,30 @@ if(isset($_POST['btnLogin']))
 <body>
 
 	<?php include'Includes\Header.html';?>
-	<form method="post" action="index.php" enctype="multipart/form-data">
+	<div class="login-form-outer">
+	<form method="post" action="index.php" enctype="multipart/form-data" class="login-form">
 		<table>
 			<tr>
 				<td colspan="2"><b>Login Here</b></td>
 			</tr>
 			<tr>
-				<td>User Name</td>
+				<td>User Name :</td>
 				<td><input type="text" name="txtUserName"></td>
 			</tr>
 			
 			<tr>
-				<td>Password</td>
+				<td>Password :</td>
 				<td><input type="password" name="txtPassword"></td>
 			</tr>
 			
 			<tr>
 				<td colspan="2" align="right">
-					<input type="submit" name="btnLogin" value="Login">
+					<input type="submit" name="btnLogin" value="Login" class="login-button">
 				</td>
 			</tr>
 		</table>
 	</form>
+	</div>
 <?php include 'Includes/Footer.html'?>
 </body>
 </html>
