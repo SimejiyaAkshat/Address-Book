@@ -1,12 +1,9 @@
-<html>
-<body>
-<table>
+<table class="left-links">
 <tr>
 	<td>
-		<font color='white'>Login as <b><?php echo $_SESSION["UserName"]?></b></font>
+		<font>Logged in as <b><?php echo $_SESSION["UserName"]?></b></font>
 	</td>
 </tr>
-<div>
 <tr>
 	<td>
 		<a href="./UserList.php">User List</a>
@@ -42,7 +39,4 @@
 		<a href="./Logout.php">Log out</a>
 	</td>
 </tr>
-</div>
 </table>
-</body>
-</html>

@@ -24,96 +24,93 @@ $result = mysqli_query($conn,$query);
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table>
-<tr>
-	<td colspan="5">
-		<?php include 'Includes\Header.html';?>
-	</td>
-</tr>
-<form method="post">  
-<tr>
-	<td colspan='2'>Enter City Name:-  <input type='text' name='city' placeholder='City Name'></td>
-</tr>
-<tr>
-	<td colspan='2'><input type='submit' name='submit'></td>
-</tr>
-</form>
-<tr>
-	<td>
-		<table>
-			<td valign="top">
-			<?php 
-				if($_SESSION['UserRole']=="Admin")
-				{
-					include_once 'Includes/mnuAdmin.php';
-				}
-				if($_SESSION['UserRole']=="User")
-				{
-					include_once 'Includes/mnuUser.php';
-				}
-			?>
-			</td>
-			<td>
-				<div class="headers">
-				<table>
-				<tr bgcolor='grey' class='tr1'	>
-				<td>
-					Photo
-				</td>
-				<td>
-					Name
-				</td>
-				<td>
-					City
-				</td>
-				<td>
-					Email id
-				</td>
-				<td>
-					Edit Data
-				</td>
-				<td>
-					Delete Data
-				</td>
-				</tr>
-				</div>
-			<?php 
-				while($row=mysqli_fetch_assoc($result))
-				{
-			?>
-				<tr class='entry'>
-					<td>
-						<img src="image/<?php echo $row['photo'];?>" height="70rem" width="70rem" class="img1">
+
+	<?php include 'Includes\Header.html';?>
+	<div class="content-main-container">
+		<div class="content-container">
+		<div class="search-form">
+		<form method="post">  
+			<div>
+				<span>Enter City Name:-  </span><input type='text' name='city' placeholder='City Name'>
+				<div><input type='submit' name='submit'></div>
+			</div>
+		</form>
+		</div>
+		<div class="data-container">
+					<div class="data-left-con">
+					<?php 
+						if($_SESSION['UserRole']=="Admin")
+						{
+							include_once 'Includes/mnuAdmin.php';
+						}
+						if($_SESSION['UserRole']=="User")
+						{
+							include_once 'Includes/mnuUser.php';
+						}
+					?>
+					</div>
+					<div class="data-right-con">
+						<div class="headers">
+						<table>
+						<tr class="headers-tr">
+						<td>
+							Photo
+						</td>
+						<td>
+							Name
+						</td>
+						<td>
+							City
+						</td>
+						<td>
+							Email id
+						</td>
+						<td>
+							Edit Data
+						</td>
+						<td>
+							Delete Data
+						</td>
+						</tr>
+						</div>
+					<?php 
+						while($row=mysqli_fetch_assoc($result))
+						{
+					?>
+						<tr class='entry'>
+							<td>
+								<div  class="profile-image">
+									<img src="image/<?php echo $row['photo'];?>" height="70rem" width="70rem" class="img1">
+								</div>
+							</td>
+							<td>
+								<?php echo $row['Name'];?>
+							</td>
+							<td>
+								<?php echo $row['City'];?>
+							</td>
+							<td>
+								<?php echo $row['EmailID'];?>
+							</td>
+							<td>
+								<a href="Entry.php?PID=<?php echo $row['PersonID'];?>">Edit</a>
+							</td>
+							<td>
+								<a href="Delete.php?PID=<?php echo $row['PersonID'];?>">Delete</a>
+							</td>
+						</tr>
+					<?php 
+						}
+					?>
+						</table>
 					</td>
-					<td>
-						<?php echo $row['Name'];?>
-					</td>
-					<td>
-						<?php echo $row['City'];?>
-					</td>
-					<td>
-						<?php echo $row['EmailID'];?>
-					</td>
-					<td>
-						<a href="Entry.php?PID=<?php echo $row['PersonID'];?>">Edit</a>
-					</td>
-					<td>
-						<a href="Delete.php?PID=<?php echo $row['PersonID'];?>">Delete</a>
-					</td>
-				</tr>
-			<?php 
-				}
-			?>
 				</table>
 			</td>
-		</table>
-	</td>
-</tr>
-			<tr>
-				<td colspan="5">
-				<?php include 'Includes/Footer.html';?>
-				</td>
-			</tr>
-</table>
+				</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<?php include 'Includes/Footer.html';?>
 </body>
 </html>

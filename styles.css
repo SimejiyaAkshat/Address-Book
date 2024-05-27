@@ -37,6 +37,7 @@
 	align-items: center;
 	background-color: #000000;
 	color : #ffffff;
+	padding:20px;
 }
 
 .footer table td{
@@ -96,4 +97,106 @@
 	border-radius:5px;
 	padding:3px 5px;
 	font-size:20px;
+}
+
+.content-main-container {
+	position:relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width:100%;
+	height:100%;
+}
+
+.data-container {
+	display:flex;
+	flex-direction:row;
+	margin: 20px;
+	column-gap: 50px;
+}
+
+.left-links tbody{
+	display: flex;
+	flex-direction: column;
+}
+
+.left-links tr{
+	margin: 10px 0;
+	display: inline-block;
+}
+
+.left-links,.headers table {
+	padding: 10px;
+	margin: 20px;
+	border: 1px solid #070707;
+	border-radius:10px;
+}
+
+.left-links tr a, .entry td a{
+	text-decoration: none;
+	color:#000000;
+	transition: all 500ms ease-in-out;
+	padding:10px 15px;
+	border-radius: 8px;
+}
+
+.left-links tr a:hover, .entry td a:hover{
+	color: #bbbbff;
+	background-color:#070707;
+}
+	
+.headers-tr{
+	color: #bbbbff;
+	background-color:#070707;
+}
+
+.headers-tr td{
+	padding: 10px 12px;
+	border-radius:10px;
+}
+
+.entry td{
+	padding: 5px 8px;
+}
+
+.profile-image {
+	width: 200px;
+	height:200px;
+}
+
+.profile-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all 500ms ease-in-out;
+}
+
+.profile-image img:hover {
+	transform: scale(1.013);
+	border-radius:10px;
+}
+
+.search-form{
+	display:flex;
+	align-items:center;
+	justify-content: center;
+}
+
+.search-form div {
+	display: flex;
+	column-gap:15px;
+	font-size: 24px;
+	align-items:center;
+}
+
+.search-form div input[type="text"]{
+	font-size: 24px;
+	padding: 5px 8px;
+}
+
+.search-form div input[type="submit"]{
+	color: #bbbbff;
+	background-color:#070707;
+	padding:10px 13px;
+	border-radius: 10px;
 }
