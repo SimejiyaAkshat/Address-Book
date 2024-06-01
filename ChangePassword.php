@@ -24,16 +24,14 @@ if(isset($_POST['btnChangePassword']))
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table>
-	<tr>
-		<td>
-			<?php include 'Includes\Header.html';?>
-		</td>
-	</tr>
-		<td>
-			<table>
-				<tr>
-					<td>
+
+<?php include 'Includes\Header.html';?>
+
+
+	<div class="content-main-container">
+		<div class="content-container">
+			<div class="data-container">
+				<div class="data-left-con">
 					<?php
 						if($_SESSION['UserRole'] == "Admin")
 						{
@@ -44,10 +42,9 @@ if(isset($_POST['btnChangePassword']))
 							include_once 'Includes/mnuUser.php';
 						}
 					?>
-					</td>
+				</div>
 					<form method='post' enctype="multiport/form-data" action="">
-					<td>
-						<table>
+						<table class="createuserForm">
 							<tr>
 								<td colspan='2'>
 									<h3>Change Password</h3>
@@ -83,17 +80,11 @@ if(isset($_POST['btnChangePassword']))
 								</td>
 							</tr>
 						</table>
-					</td>
 					</form>
-				</tr>
-			</table>
-		</td>
-	<tr>
-		<td>
-		<?php include 'Includes/Footer.html';?>
-		</td>
-	</tr>
-</table>
+			</div>
+		</div>
+	</div>
+<?php include 'Includes/Footer.html';?>
 
 </body>
 </html>

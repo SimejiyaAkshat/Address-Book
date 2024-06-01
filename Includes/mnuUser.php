@@ -1,6 +1,4 @@
-<html>
-<body>
-<table>
+<table class="left-links">
 <tr>
 	<td>
 		login as, <b><?php echo $_SESSION["UserName"];?></b>
