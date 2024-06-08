@@ -1,4 +1,6 @@
 <?php
+
+/*The AddressBook contains features such as adding user, persons details and login and logout functionality, it has 2 users admin and user*/
 session_start();
 unset($_SESSION["UserName"]);
 unset($_SESSION["UserRole"]);
